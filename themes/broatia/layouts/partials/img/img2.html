@@ -42,4 +42,4 @@ sizes="(min-width: 35em) 845px, 100vw"
   {{ if ge $src.Width "1500" }}
     {{ with $large }}, {{.}} 1500w {{ end }}
   {{ end }}'
-    src="{{ $src.RelPermalink }}"  alt="{{ .Title }}" decoding="auto"  width="{{ $origWidth }}" height="auto" >
+    src="{{ $src.RelPermalink }}"  alt="{{ .Title }}" decoding="auto" loading="lazy"  width="{{ $origWidth }}" height="auto" >
