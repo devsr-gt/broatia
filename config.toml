@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://iridescent-treacle-aff456.netlify.app/'
 languageCode = 'en-us'
 title = 'Broatia'
 theme = 'broatia'
