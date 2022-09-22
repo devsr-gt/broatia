@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div  class="container">
 {{ range resources.Match "images/*.jpg" }}
-<img loading="lazy" src="{{ .RelPermalink }}"  alt="">
+<img src="{{ .RelPermalink }}"  alt="">
 {{ end }}
 </div>
 {{ end }}
