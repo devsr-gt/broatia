@@ -1,0 +1,9 @@
+{{ define "main" }}
+{{ range resources.Match "images/*" }}
+<div  class="container"></div>
+<img src="{{ .RelPermalink }}"  alt="">
+{{ end }}
+</figure>
+
+{{ end }}
+</div>
