@@ -1,9 +1,8 @@
 {{ define "main" }}
-{{ range resources.Match "images/*" }}
+{{ range first 10 .Resources.ByType "image" }}
 <div  class="container"></div>
 <img src="{{ .RelPermalink }}"  alt="">
 {{ end }}
 </figure>
-
 {{ end }}
 </div>

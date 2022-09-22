@@ -1,15 +1,18 @@
 {{ $banner := resources.GetMatch .  }}
 
-{{ $tiny := ($banner.Resize "480x q20 webp") }}
-{{ $small := ($banner.Resize "768x q20 webp") }}
+{{ $tiny := ($banner.Resize  "250x q20 webp") }}
+{{ $small := ($banner.Resize  "480x q20 webp") }}
+{{ $smaller := ($banner.Resize  "768x q20 webp") }}
 {{ $medium := ($banner.Resize "1024x  q20 webp") }}
 {{ $large := ($banner.Resize "1366x q20 webp") }}
 
 <img
 srcset="
-    {{- with $tiny.RelPermalink -}}{{.}} 480w{{- end -}}
-    {{- with $small.RelPermalink -}}, {{.}} 768w{{- end -}}
+    {{- with $tiny.RelPermalink -}}{{.}} 250w{{- end -}}
+    {{- with $small.RelPermalink -}}, {{.}} 480w{{- end -}}
+    {{- with $smaller.RelPermalink -}}, {{.}} 768w{{- end -}}
     {{- with $medium.RelPermalink -}}, {{.}} 1024w{{- end -}}
     {{- with $large.RelPermalink -}}, {{.}} 1366w{{- end -}}"
 src="{{ $banner.RelPermalink }}"
-alt="banner-image" loading="lazy">
+decoding="async"
+ width="{{ $banner.Width }}" alt=".Title">
