@@ -2,7 +2,7 @@
 <div  class="container">
 {{ range  resources.Match "images/*.jpg" }}
 {{ partial "img/img2.html" . }}
-<img src="{{ .RelPermalink }}"  alt="">
 {{ end }}
 </div>
 {{ end }}
+

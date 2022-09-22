@@ -1,9 +1,9 @@
 {{ $banner := resources.GetMatch .  }}
 
-{{ $tiny := ($banner.Fill "480x280 q90 webp") }}
-{{ $small := ($banner.Fill "768x280 q90 webp") }}
-{{ $medium := ($banner.Fill "1024x280 q90 webp") }}
-{{ $large := ($banner.Fill "1366x280 q90 webp") }}
+{{ $tiny := ($banner.Resize "480x q90 webp") }}
+{{ $small := ($banner.Resize "768x q90 webp") }}
+{{ $medium := ($banner.Resize "1024x  q90 webp") }}
+{{ $large := ($banner.Resize "1366x q90 webp") }}
 
 <img
 srcset="
